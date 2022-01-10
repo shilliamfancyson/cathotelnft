@@ -1232,7 +1232,7 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-import "contracts/ERC721Enumerable.sol";
+import "./ERC721Enumerable.sol";
 import "./FISH.sol";
 import "./Cat.sol";
 import "./Invitation.sol";
@@ -1305,7 +1305,7 @@ contract Cat is ERC721Enumerable, Ownable {
         if (generateSeed(catSupply+cnSupply,10) != 0){
           //mint a cat
           address recipient = selectReceipient();
-          _safeMint(recipient, catSupply + 1+45000);
+          _safeMint(recipient, catSupply + 1);
           catSupply += 1;
 
         } else {

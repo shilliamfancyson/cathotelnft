@@ -261,7 +261,7 @@ contract Hotel is Ownable, IERC721Receiver{
         if (totalCatNappersStaked == 0){
             return address(0x0);
         }
-        return address(0x0);
+        return group[seed % totalCatNappersStaked].owner;
 
 
     }
